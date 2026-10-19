@@ -13,4 +13,18 @@ SQL - Linguagem para conversar com nosso BD
 -> ** Relacionais (SQL)
 
 -> Não-relacionais (NoSQL)
+
+
+-------------------------------------
+Etapas:
+Minimundo (Entrevista) - Entender o que voce precisar guardar no seu sistema
+
+Modelagem (Planejar Banco de Dados) -
+
+2. Modelagem Conceitual (Desenhar o BD, SEM se importar com detalhes técnicos)
+
+3. Modelagem Lógica (Desenhar o BD, COM detalhes técnicos)
+
+4. Modelo Físico (Implantado)
+
 */
