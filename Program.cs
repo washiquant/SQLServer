@@ -26,5 +26,12 @@ Modelagem (Planejar Banco de Dados) -
 3. Modelagem Lógica (Desenhar o BD, COM detalhes técnicos)
 
 4. Modelo Físico (Implantado)
+----------------------------------------
+Bibliotecas para usar o SQL no Visual Studio VIA TERMINAL :
 
+dotnet add package Microsoft.Data.SqlClient 
+
+Link para aprender Banco de Dados e fazer Diagramas :
+https://app.diagrams.net/
 */
+
