@@ -6,9 +6,9 @@ using System.Text;
  * **Exercício 1 — Qual regra usar?** Diga o que cada item vira no modelo lógico:
 
 1. O atributo composto **endereço** (rua, número, bairro) de CLIENTE.
-R: Chave Estrangeira
+R: Tabela Endereço - rua,numero,bairro COLUNAS
 2. O atributo multivalorado **telefone** de CLIENTE.
-R: Chave Primarios
+R: Criar tabela telefone com FK do id_cliente
 3. O atributo derivado **idade** de ALUNO.
 R: Chave Estrangeira
 4. CLIENTE (1,1) — faz — (0,N) PEDIDO. Onde fica a FK?
