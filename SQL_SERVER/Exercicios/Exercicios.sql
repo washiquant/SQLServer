@@ -19,3 +19,33 @@ Para cada situação, diga qual comando resolve (CREATE, ALTER ou DROP) e com qu
 6.- DROP
 7. -DROP
 */
+*/
+
+/*
+**Exercício 2 — Encontre os erros.** O script abaixo tem 5 erros. Encontre e corrija:
+
+```sql
+CREATE TABLE PRODUTO (
+    codigo INT NULL,
+    descricao VARCHAR(100) NOT NULL
+    preco DECIMAL(10,2) NOT NULL,
+    CONSTRAINT PK_PRODUTO PRIMARY KEY (codigo),
+);
+CREATE TABLE VENDA (
+    numero INT NOT NULL PRIMARY KEY,
+    codigo_produto VARCHAR(10) NOT NULL,
+    CONSTRAINT FK_VENDA_PRODUTO FOREIGN KEY (codigo_produto) REFERENCES PRODUTOS (codigo)
+);
+```
+*/
+CREATE TABLE PRODUTO (
+    codigo INT NOT NULL PRIMARY KEY,
+    descricao VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    
+);
+CREATE TABLE VENDA (
+    numero INT NOT NULL PRIMARY KEY,
+    codigo_produto INT NOT NULL,
+    CONSTRAINT FK_VENDA_PRODUTO FOREIGN KEY (codigo_produto) REFERENCES PRODUTO (codigo)
+);
