@@ -11,13 +11,13 @@ Para cada situação, diga qual comando resolve (CREATE, ALTER ou DROP) e com qu
 6. A coluna **observacao** não é mais usada.
 7. A tabela PRODUTO inteira não é mais necessária.
 -------------------------------------------------------------
-1.- CREATE
-2.- CREATE
-3.- ALTER
-4.- ALTER
-5.- ALTER
-6.- DROP
-7. -DROP
+1.- CREATE DATABASE LOJA
+2.- CREATE TABLE PRODUTO
+3.- ALTER TABLE ADD ESTOQUE_DO_PRODUTO VARCHAR(100)
+4.- ALTER TABLE PRODUTO ALTER COLUNM  NOME VARCHAR(100)
+5.- ALTER TABLE PRODUTO ALTER COLUNM PRECO CONSTRAINT UQ_PRECO_NEGATIVO CHECK( PRECO >= 0)
+6.- ALTER TABLE PRODUTO DROP COLUNM OBSERVACAO
+7. -DROP TABLE PRODUTO
 */
 */
 
@@ -49,3 +49,14 @@ CREATE TABLE VENDA (
     codigo_produto INT NOT NULL,
     CONSTRAINT FK_VENDA_PRODUTO FOREIGN KEY (codigo_produto) REFERENCES PRODUTO (codigo)
 );
+/*
+**Exercício 3 — ALTER TABLE.** No banco Escola, escreva os comandos para:
+
+1. Adicionar a coluna **cpf** CHAR(11) NULL em ALUNO.
+2. Garantir que o cpf do aluno não se repita.
+3. Aumentar o nome do curso para VARCHAR(120).
+4. Garantir que a data_nascimento do aluno seja menor que a data de hoje.
+5. Remover a coluna cpf.
+
+*/
+ ALTER TABLE ALUNO add CPF VARCHAR(100) NOT NULL;
