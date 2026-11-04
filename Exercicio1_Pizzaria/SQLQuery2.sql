@@ -14,40 +14,40 @@
 9. Preço médio, menor e maior preço das pizzas.
 10. Quantos pedidos houve em cada dia, só dos dias com mais de 1 pedido.
 */
-feat : adiciona enunciado Exercicio 1
+
 USE PIZZARIA 
  --
 --1. Todas as pizzas da mais cara para a mais barata.
  SELECT * FROM PIZZA ORDER BY PRECO DESC --1
 --2. As 3 pizzas mais baratas.
 SELECT TOP 3 * FROM PIZZA  ORDER BY PRECO --2
-
+--3. Pizzas com preço entre R $50 e R$ 60.
 SELECT * FROM PIZZA WHERE PRECO BETWEEN 50 AND 60 --3
-
+--4. Clientes que moram no Centro ou no Jardim.
 SELECT *  FROM CLIENTE WHERE (BAIRRO = 'Centro' OR BAIRRO = 'Jardim') --4
 SELECT * FROM CLIENTE WHERE BAIRRO IN ('Centro','Jardim') --4
-
+--5. Pedidos feitos em outubro de 2026.
 SELECT * FROM PEDIDO WHERE DATA_PEDIDO >= '2026-10-01' AND DATA_PEDIDO <= '2026-10-01' --5
 SELECT * FROM PEDIDO WHERE DATA_PEDIDO BETWEEN '2026-10-01' AND '2026-10-01' --5
-
+--6. Quantos pedidos cada cliente fez (cpf e quantidade), do maior para o menor.
  SELECT * CPF_CLIENTE, COUNT (*) AS TOTAL_VENDIDO
  FROM PEDIDO
  GROUP BY CPF_CLIENTE
  ORDER BY TOTAL_VENDIDO DESC -- 6
-
+--7. Quantas pizzas (soma das quantidades) foram vendidas de cada código de pizza.
 SELECT CODIGO_PIZZA AS CODIGO,
 SUM(QUANTIDADE) AS QTD_PEDIDO
 FROM ITEM_PEDIDO
 GROUP BY CODIGO_PIZZA -- 7
-
+--8. Entregadores (matrícula) que fizeram mais de 2 entregas.
 SELECT * FROM PEDIDO GROUP BY MATRICULA_ENTREGADOR, COUNT(*) AS ENTREGAS HAVING COUNT(*) > 2
 ORDER BY ENTREGAS -- 8
-
+--9. Preço médio, menor e maior preço das pizzas.
 SELECT AVG(PRECO) AS MEDIA,
        MIN(PRECO) AS MENOR,
        MAX(PRECO) AS MAIOR
 FROM PIZZA -- 9
-
+--10. Quantos pedidos houve em cada dia, só dos dias com mais de 1 pedido.
 SELECT DATA_PEDIDO, COUNT(*) QUANTIDADE 
 FROM PEDIDO
 GROUP BY DATA_PEDIDO
