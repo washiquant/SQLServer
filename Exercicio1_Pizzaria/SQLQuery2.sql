@@ -14,12 +14,12 @@
 9. Preço médio, menor e maior preço das pizzas.
 10. Quantos pedidos houve em cada dia, só dos dias com mais de 1 pedido.
 */
-
+feat : adiciona enunciado Exercicio 1
 USE PIZZARIA 
  --
-1. Todas as pizzas da mais cara para a mais barata.
+--1. Todas as pizzas da mais cara para a mais barata.
  SELECT * FROM PIZZA ORDER BY PRECO DESC --1
-
+--2. As 3 pizzas mais baratas.
 SELECT TOP 3 * FROM PIZZA  ORDER BY PRECO --2
 
 SELECT * FROM PIZZA WHERE PRECO BETWEEN 50 AND 60 --3
