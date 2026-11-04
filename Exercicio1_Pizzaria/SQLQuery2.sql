@@ -16,6 +16,8 @@
 */
 
 USE PIZZARIA 
+ --
+1. Todas as pizzas da mais cara para a mais barata.
  SELECT * FROM PIZZA ORDER BY PRECO DESC --1
 
 SELECT TOP 3 * FROM PIZZA  ORDER BY PRECO --2
